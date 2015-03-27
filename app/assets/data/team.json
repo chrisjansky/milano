@@ -1,0 +1,124 @@
+{
+  "team": [
+    {
+      "category": "product",
+      "title": "Product Design",
+      "people": [
+        {
+          "name": "Branislav Grejtek"
+        },
+        {
+          "name": "Daniel Szöllösi"
+        },
+        {
+          "name": "Eva Wirthová"
+        },
+        {
+          "name": "Jiří Maxmilián Blšták"
+        },
+        {
+          "name": "Karolína Fardová"
+        },
+        {
+          "name": "Kateřina Brůhová"
+        },
+        {
+          "name": "Lucia Plevová"
+        },
+        {
+          "name": "Lucia Kubišová"
+        },
+        {
+          "name": "Lucia Regasková"
+        },
+        {
+          "name": "Lukáš Uliarczyk"
+        },
+        {
+          "name": "Tereza Čižmárová"
+        },
+        {
+          "name": "Uranbileg Altangerel"
+        },
+        {
+          "name": "Veronika Zelezníková"
+        }
+      ]
+    },
+    {
+      "category": "graphic",
+      "title": "Graphic Design",
+      "people": [
+        {
+          "name": "Veronika Holíková"
+        },
+        {
+          "name": "Petr Belák"
+        }
+      ]
+    },
+    {
+      "category": "spatial",
+      "title": "Spatial Design",
+      "people": [
+        {
+          "name": "Michael Chomiszak"
+        }
+      ]
+    },
+    {
+      "category": "photo",
+      "title": "Photography",
+      "people": [
+        {
+          "name": "Filip Beránek"
+        }
+      ]
+    },
+    {
+      "category": "video",
+      "title": "Video",
+      "people": [
+        {
+          "name": "Pavel Mašek"
+        }
+      ]
+    },
+    {
+      "category": "web",
+      "title": "Web development",
+      "people": [
+        {
+          "name": "Christian Jánský"
+        }
+      ]
+    },
+    {
+      "category": "marketing",
+      "title": "Marketing &amp; PR",
+      "people": [
+        {
+          "name": "Anežka Adamíková"
+        }
+      ]
+    },
+    {
+      "category": "supervisor",
+      "title": "Supervisor",
+      "people": [
+        {
+          "name": "Michael Vasku"
+        }
+      ]
+    },
+    {
+      "category": "coordinator",
+      "title": "Coordinator TBU",
+      "people": [
+        {
+          "name": "Richard Vodička"
+        }
+      ]
+    }
+  ]
+}

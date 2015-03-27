@@ -1,0 +1,140 @@
+{
+  "products": [
+    {
+      "id": "shoe",
+      "title": "PopUpShoe",
+      "author": "Uranbileg Altangerel",
+      "description": "Move like you want to #move, feel like you want to #feel, do what you want to #do. Because world is your oyster.",
+      "image": "10_bota",
+      "count": 3,
+      "type": "tall"
+    },
+    {
+      "id": "jewellery",
+      "title": "PopUpJewellery",
+      "author": "Lucia Plevová",
+      "description": "The whole cosmos #popup in #rings, #necklaces, #bracletes and #brooches. Those #burntcoals combined with #resin created such a unique #jewellery.",
+      "image": "01_sperky",
+      "count": 5,
+      "type": "wide",
+      "illustration": {
+        "position": "top",
+        "image": "vysku_kadernik.png",
+        "style": "square"
+      }
+    },
+    {
+      "id": "cinder",
+      "title": "PopUpCinder",
+      "author": "Branislav Glejtek",
+      "description": "#polygon shape of the interior lights brings a piece of #rockymountain into the house. #light made from #ash is revivified by colours of #fabriccables.",
+      "image": "02_svetla_brana",
+      "count": 2,
+      "type": "wide"
+    },
+    {
+      "id": "pot",
+      "title": "Flower Pot",
+      "author": "Tereza Čižmárová",
+      "description": "#flowerpot uses the #naturalfertilizingprinciple that was created by #burning inner surface of the pot. #glasspot effects roots and help them to #growfaster.",
+      "image": "08_kvetinac",
+      "overlay": true,
+      "count": 2,
+      "type": "tall",
+      "illustration": {
+        "position": "bottom",
+        "image": "sirku_klapkar.png",
+        "style": "square"
+      }
+    },
+    {
+      "id": "chandelier",
+      "title": "PopUpChandelier",
+      "author": "Eva Wirthová",
+      "description": "#light looks like a luxury secret box for something we have to #protect. It remains that #wood is becoming a #precious material. #glass symbolizes #fragility of nature balance.",
+      "image": "06_eva_lampa",
+      "count": 2,
+      "type": "tall"
+    },
+    {
+      "id": "coffin",
+      "title": "PopUpCoffin",
+      "author": "Jiří Maxmilián Blšták",
+      "description": "#coffin for pets with growing #tree is a symbol of #continuity and a #newlife. It is also a gentle #memory for those you loved and gone.",
+      "image": "09_rakev",
+      "count": 2,
+      "type": "tall"
+    },
+    {
+      "id": "desk",
+      "title": "PopUpDesk",
+      "author": "Karolína Fardová",
+      "description": "#hairytable lives up every interior. #fury friend is #folding so it may be also handy as a #carpet placed on a floor or a wall.",
+      "image": "03_stolik_chlpac",
+      "count": 4,
+      "type": "wide",
+      "illustration": {
+        "position": "bottom",
+        "image": "vysku_zvukar.png",
+        "style": "square"
+      }
+    },
+    {
+      "id": "stool",
+      "title": "PopUpStool",
+      "author": "Kateřina Brůhová",
+      "description": "What if we #reverse the #recyclingprocess? The table made from #paperwood #shifts the #ecologicalapproach.",
+      "image": "04_papirove_stolceky",
+      "count": 2,
+      "type": "wide"
+    },
+    {
+      "id": "table",
+      "title": "PopUpTable",
+      "author": "Veronika Zelezníková",
+      "description": "Inspiration #popup in frozen #nature where everything is #stable. Rough look of #woodenbranches combined with #resin brings the wildness of nature to the interior.",
+      "image": "07_punkovica",
+      "count": 2,
+      "type": "tall"
+    },
+    {
+      "id": "radiator",
+      "title": "PopUpRadiator",
+      "author": "Lukáš Uliarczyk",
+      "description": "#siton or look at the #3Dprinted #wooden #radiator and warm yourself up. And if it’s not enough, fire up this #hotspot.",
+      "image": "12_radiator",
+      "type": "tall"
+    },
+    {
+      "id": "speakers",
+      "title": "PopUpSpeakers",
+      "author": "Lucia Kubišová",
+      "description": "This stylish #speakers upgrade every #party to the unforgettable #soundexperience.",
+      "image": "13_repraky",
+      "type": "wide"
+    },
+    {
+      "id": "lamp",
+      "title": "PopUpLamp",
+      "author": "Daniel Szöllösi",
+      "description": "Interior wooden #lamp is geometrically divided in the middle by a #glass plate. The #glassedge is lit and creates an impressive effect.",
+      "image": "05_lampa_daniel",
+      "count": 3,
+      "type": "tall"
+    },
+    {
+      "id": "log",
+      "title": "PopUpLight",
+      "author": "Lucia Regásková",
+      "description": "At the beginning was an old wooden #log used as a form of the light bulb, but it stays and continues as the pedestal of the light. Wood and glass #live in mutual #symbiosis.",
+      "image": "11_poleno_svetla",
+      "count": 2,
+      "type": "tall",
+      "illustration": {
+        "position": "bottom",
+        "image": "sirku_chaplin.png",
+        "style": "square"
+      }
+    }
+  ]
+}

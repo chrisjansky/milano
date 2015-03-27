@@ -1,0 +1,35 @@
+{
+  "navItems": [
+    {
+      "title": "Info",
+      "link": "#info"
+    },
+    {
+      "title": "Products",
+      "link": "#products"
+    },
+    {
+      "title": "About",
+      "link": "#about"
+    },
+    {
+      "title": "Team",
+      "link": "#team"
+    },
+    {
+      "title": "Contact",
+      "link": "#contact"
+    }
+  ],
+  "sideItems": [
+    {
+      "title": "Press",
+      "link": "press.html #press",
+      "data": true
+    },
+    {
+      "title": "Facebook",
+      "link": "https://www.facebook.com/popupSHOWcz"
+    }
+  ]
+}
