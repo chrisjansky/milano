@@ -1,0 +1,19 @@
+// Families.
+$font__sans: "museo-sans", sans-serif;
+$font__serif: "Georgia", serif;
+$font__mono: monospace;
+
+// Weights.
+$font__sans--light: 300;
+$font__sans--regular: 500;
+$font__sans--bold: 700;
+$font__sans--black: 900;
+
+$font__serif--regular: normal;
+$font__serif--bold: bold;
+
+// Defaults.
+$default__size: $base-1;
+$default__family: $font__sans;
+$default__weight: $font__sans--regular;
+$default__leading: $spacing--b;
