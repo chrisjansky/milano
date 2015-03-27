@@ -1,0 +1,142 @@
+.m-sticky {
+  @include position(fixed, 0 0 null 0);
+  z-index: $index--b;
+
+  color: white;
+  background-color: rgba($color1--500, .95);
+
+  @include padding(em($ratio--b) null);
+}
+
+.m-header {
+  text-align: center;
+
+  color: $grey--500;
+}
+
+.m-header__top {
+  padding-top: em($ratio--xxl);
+
+  background-image: url("../images/pattern_stripe.jpg");
+  background-position: -5px center;
+}
+
+.m-header__cell {
+  @include pseudo-center--parent;
+
+  height: em(220);
+}
+
+.m-header__content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.m-header__text {
+  width: flex-grid(8, $columns__desktop);
+
+  @include margin(null auto em($ratio--xl));
+
+  color: $color1--500;
+}
+
+.m-products {
+  padding: em($ratio--l) em($ratio--m);
+}
+
+.m-products__loop {
+  @include margin(null auto);
+}
+
+.m-about__title {
+  color: $color1--500;
+}
+
+.m-about__text {
+  @include column-count(2);
+  @include column-gap(em($ratio--m));
+
+  width: flex-grid(10, $columns__desktop);
+  @include shift(1 of $columns__desktop);
+
+  margin-top: em($ratio--l);
+
+  p:first-child {
+    margin-top: 0;
+  }
+}
+
+.m-team {
+  color: $grey--400;
+}
+
+.m-team__title {
+  color: $color1--500;
+}
+
+.m-team__name {
+  color: $grey--600;
+}
+
+.m-team__group {
+  @include span-columns($columns__desktop / 6);
+
+  margin-bottom: em($ratio--m);
+}
+
+.m-team__list {
+  @include clearfix;
+
+  font-size: em($unit--s);
+}
+
+.m-team__person {
+  line-height: em($height--xs);
+}
+
+.m-team__group--product {
+  width: 100%;
+  @include omega();
+
+  li {
+    @include span-columns($columns__desktop / 6);
+    @include omega(6n);
+  }
+}
+
+.m-team__group--marketing {
+  @include omega();
+}
+
+.m-contact__people {
+  margin-top: em($ratio--xl);
+}
+
+.m-contact__position {
+  color: rgba(white, .6);
+}
+
+.m-links {
+  @include clearfix;
+
+  margin-top: em($ratio--m);
+}
+
+.m-links__title {
+  color: $color1--700;
+}
+
+.m-links__group {
+  @include span-columns($columns__desktop / 2);
+}
+
+.m-links__item {
+  @include span-columns(3 of $columns__desktop / 2)
+}
+
+.m-releases__title,
+.m-annotations__title {
+  color: $color1--500;
+
+  text-align: center;
+}

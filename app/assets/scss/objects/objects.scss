@@ -1,0 +1,153 @@
+.o-logo {
+  display: inline-block;
+
+  width: em(220);
+  height: em(220);
+
+  overflow: hidden;
+}
+
+.o-thumb {
+  margin-bottom: em(26);
+}
+
+.o-thumb__link {
+  display: block;
+  position: relative;
+
+  text-decoration: none;
+}
+
+.o-thumb__overlay {
+  @include position(absolute, 0 0 0 0);
+
+  z-index: $index--xs;
+
+  color: white;
+  background-color: rgba($color2--500, .9);
+
+  @include pseudo-center--parent;
+  text-align: center;
+
+  opacity: 0;
+
+  .o-thumb__link:hover & {
+    opacity: 1;
+  }
+}
+
+.o-thumb__image {
+  // .o-thumb--wide & {
+  //   width: 463px;
+  //   height: 300px;
+  // }
+  // .o-thumb--tall & {
+  //   width: 300px;
+  //   height: 463px;
+  // }
+}
+
+.o-sizer--column {
+  width: em(163);
+}
+
+.o-sizer--gutter {
+  width: em(0);
+}
+
+.o-gallery {
+  height: 100%;
+}
+
+.o-gallery__item {
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  @include pseudo-center--parent;
+}
+
+.o-gallery__image {
+  display: inline-block;
+  vertical-align: middle;
+
+  max-width: 50%;
+  max-height: 100%;
+}
+
+.o-gallery__content {
+  display: inline-block;
+  vertical-align: middle;
+
+  max-width: em(600);
+
+  white-space: normal;
+}
+
+.o-boy {
+  background-position: center;
+
+  margin-bottom: em(26);
+}
+
+.o-boy--square {
+  width: em(300);
+  height: em(300);
+}
+
+.o-modal {
+  @include position(fixed, 0 0 0 0);
+  background-color: white;
+
+  z-index: $index--l;
+}
+
+.o-affiliate {
+  display: inline-block;
+
+  @include state--active {
+    opacity: .6;
+  }
+}
+.o-affiliate--cd {
+  width: em(168);
+}
+
+.o-detail {
+  .featherlight & {
+    height: 100%;
+  }
+}
+
+.o-detail__title {
+  color: $color1--500;
+}
+.o-detail__author {
+  color: $grey--200;
+}
+.o-detail__description {
+  color: $grey--600;
+}
+
+.o-release {
+  margin-bottom: em($ratio--m);
+
+  color: $grey--300;
+}
+
+.o-release__text {
+  color: $grey--600;
+}
+
+.o-release__title {
+  color: $grey--800;
+}
+
+.o-download {
+  & + & {
+    margin-left: em($ratio--b);
+  }
+}
