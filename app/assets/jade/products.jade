@@ -1,0 +1,22 @@
+extends templates/_site
+
+block template-content
+  each instance in products
+    if instance.count
+      article.o-detail(id=instance.id)
+        .o-gallery(data-flickity)
+          .o-gallery__item
+            img.o-gallery__image(src="assets/images/detail/#{instance.image}_01.jpg", alt="#{instance.title} Photo")
+
+          .o-gallery__item
+            .o-gallery__content
+              h1.t-head--top.o-detail__title= instance.title
+              span.o-detail__author= instance.author
+              p.o-detail__description= instance.description
+
+          if instance.count > 1
+            - more = 2
+            while more <= instance.count
+              .o-gallery__item
+                img.o-gallery__image(src="assets/images/detail/#{instance.image}_0#{more}.jpg", alt="#{instance.title} Photo")
+              - more++

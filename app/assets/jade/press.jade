@@ -1,0 +1,76 @@
+extends templates/_site
+
+block template-content
+  #press.m-press.l-wrap.l-wrap--horizontal
+    .m-releases
+      h1.m-releases__title.t-head--higher Press Releases
+
+      .m-releases__list.l-grid--3
+        - mentions = 0
+          while mentions < 6
+            .o-release.l-grid__item--3
+              h1.o-release__title.t-head--low: +dummy(5, "words")
+              p.o-release__text: +dummy(200, "chars")
+              .l-inline
+                .l-inline__cell
+                  span.o-release__note Download
+                .l-inline__cell
+                  a.o-download.t-link--dark.t-dotted(href="#") DOCX
+                  a.o-download.t-link--dark.t-dotted(href="#") PDF
+            - mentions++
+
+    .m-annotations
+      h1.m-annotations__title.t-head--higher Annotations
+
+      .m-annotations__list.l-grid--3
+        each instance in ["English", "Italian", "Czech"]
+          .o-annonation.l-grid__item--3
+            a.o-download.t-link--dark.t-dotted(href="#") Download #{instance} Description
+
+    .m-pictures
+      h1.m-pictures__title.t-head--higher Press Photos
+
+      .m-pictures__list.l-grid--6
+        - products = 1
+        while products < 14
+          .o-picture.l-grid__item--6
+            img(src="http://unsplash.it/300/200/?image=#{products*10}", alt="unsplash.it")
+            .l-inline
+              .l-inline__cell
+                span.o-release__note Download
+              .l-inline__cell
+                a.o-download.t-link--dark.t-dotted(href="#") Print
+                a.o-download.t-link--dark.t-dotted(href="#") Web
+          - products++
+
+    .m-assets
+      h1.m-assets__title.t-head--higher Assets
+
+      .m-assets__list.l-grid--3
+        - graphics = 0
+        while graphics < 3
+          .o-asset.l-grid__item--3
+            a(href="#") Logo
+          - graphics++
+
+    .m-pictures
+      h1.m-pictures__title.t-head--higher Product Photos
+
+      .m-pictures__list.l-grid--6
+        - pictures = 1
+        while pictures < 7
+          .o-picture.l-grid__item--6
+            img(src="http://unsplash.it/300/200/?image=#{pictures*10}", alt="unsplash.it")
+            .l-inline
+              .l-inline__cell
+                span.o-release__note Download
+              .l-inline__cell
+                a.o-download.t-link--dark.t-dotted(href="#") Print
+                a.o-download.t-link--dark.t-dotted(href="#") Web
+          - pictures++
+
+    .m-press__contact
+      ul.o-list--stacked
+        li Anežka Adamíková
+        li +420 733 755 959
+        li: a(href="mailto:info@popupshow.cz") info@popupshow.cz
