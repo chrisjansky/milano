@@ -1,0 +1,31 @@
+.flickity-viewport {
+  position: absolute;
+  width: 100%;
+}
+
+.flickity-prev-next-button {
+  width: em(40);
+  height: em(30);
+
+  padding: em($ratio--m);
+  box-sizing: content-box;
+
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+
+  svg {
+    display: none;
+  }
+  &.previous {
+    background-image: url("../images/arrow_left.png");
+  }
+  &.next {
+    background-image: url("../images/arrow_right.png");
+  }
+
+  &:not([disabled]):hover {
+    opacity: .6;
+  }
+}

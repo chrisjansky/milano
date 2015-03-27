@@ -1,0 +1,66 @@
+// Custom styles overriding the default ones from bower_components/
+.featherlight {
+  z-index: $index--xl;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  // &:last-of-type {
+  background: rgba(white, .95) !important;
+  @include padding(em($unit--h) null);
+  // }
+
+  .featherlight-content {
+    position: static;
+
+    height: 100%;
+    width: 100%;
+
+    min-width: initial;
+    max-height: initial;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+    
+    overflow: visible;
+  }
+
+  .featherlight-image {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: auto;
+
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .featherlight-close-icon {
+    position: fixed;
+
+    width: em(40);
+    height: em(38);
+
+    top: 0;
+    right: 0;
+
+    padding: em($ratio--l);
+
+    background-color: transparent;
+    background-image: url("../images/icon_close.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+
+    box-sizing: content-box;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
+
+.featherlight--is-on {
+  overflow-y: hidden;
+}
