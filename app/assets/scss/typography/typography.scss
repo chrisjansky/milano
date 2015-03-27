@@ -1,0 +1,40 @@
+.t-dotted {
+  text-decoration: none;
+
+  border-bottom: $line--s dotted;
+}
+
+.t-head--higher {
+  font-weight: $font__sans--light;
+}
+
+.t-head--bottom {
+  text-transform: uppercase;
+  letter-spacing: em($ratio--t);
+
+  font-size: em($unit--xs);
+  font-weight: $font__sans--regular;
+}
+
+.t-entre {
+  text-align: center;
+
+  text-transform: uppercase;
+  letter-spacing: em($ratio--t);
+
+  transform: skew(-7deg) rotate(-7deg);
+}
+
+.t-text-link {
+  text-decoration: none;
+
+  border-bottom: $line--s dotted;
+
+  @include state--link {
+    color: inherit;
+  }
+
+  @include state--active {
+    color: $grey--800;
+  }
+}
