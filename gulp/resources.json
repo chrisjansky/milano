@@ -1,0 +1,41 @@
+{
+  "toMove": [
+    "app/assets/fonts/*",
+    "!app/assets/**/*.html",
+    "app/**/*.html"
+  ],
+  "injectDev": {
+    "site": [
+      "bower_components/normalize-css/normalize.css",
+      "bower_components/featherlight/src/featherlight.css",
+      "app/assets/css/style.css",
+
+      "bower_components/jquery-easing-original/jquery.easing.1.3.js",
+      "bower_components/imagesloaded/imagesloaded.pkgd.js",
+      "bower_components/masonry/dist/masonry.pkgd.js",
+      "bower_components/featherlight/src/featherlight.js",
+      "bower_components/flickity/dist/flickity.pkgd.js",
+      "bower_components/headroom.js/dist/headroom.js",
+      "bower_components/headroom.js/dist/jQuery.headroom.js",
+      
+      "bower_components/chj-framework/app/assets/js/chj-base.js",
+      "bower_components/chj-framework/app/assets/js/chj-easing.js",
+      "bower_components/chj-framework/app/assets/js/chj-external.js",
+      "app/assets/js/app.js"
+    ],
+    "vendor": [
+    ],
+    "guide": [
+    ]
+  },
+  "injectDist": {
+    "site": [
+      "dist/assets/css/style-min.css",
+      "dist/assets/js/site-min.js"
+    ],
+    "vendor": [
+    ],
+    "guide": [
+    ]
+  }
+}
