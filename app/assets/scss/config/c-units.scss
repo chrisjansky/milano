@@ -63,6 +63,7 @@ $height--m:  round(modular-scale($base-1 * $spacing--m, 1,  $multiplier-1));
 $height--b:  round(modular-scale($base-1 * $spacing--b, 1,  $multiplier-1));
 $height--s:  round(modular-scale($base-1 * $spacing--s, 1,  $multiplier-1));
 $height--xs: round(modular-scale($base-1 * $spacing--xs, 1, $multiplier-1));
+$height--xxs: round(modular-scale($base-1 * $spacing--xxs, 1, $multiplier-1));
 
 // Ratios
 $ratio--xxh: round(modular-scale($base-1, +7, $multiplier-1));
