@@ -23,25 +23,29 @@
           "name": "Kateřina Brůhová"
         },
         {
-          "name": "Lucia Plevová"
+          "name": "Lucia Plevová",
+          "link": "https://www.behance.net/lusius"
         },
         {
           "name": "Lucia Kubišová"
         },
         {
-          "name": "Lucia Regasková"
+          "name": "Lucia Regasková",
+          "link": "http://luciaregaskova.blogspot.sk"
         },
         {
           "name": "Lukáš Uliarczyk"
         },
         {
-          "name": "Tereza Čižmárová"
+          "name": "Tereza Čižmárová",
+          "link": "http://www.terezacizmarova.cz"
         },
         {
           "name": "Uranbileg Altangerel"
         },
         {
-          "name": "Veronika Zelezníková"
+          "name": "Veronika Zelezníková",
+          "link": "https://www.behance.net/ZeleznikTreuer"
         }
       ]
     },
@@ -89,7 +93,8 @@
       "title": "Web development",
       "people": [
         {
-          "name": "Christian Jánský"
+          "name": "Christian Jánský",
+          "link": "http://www.chrisjansky.cz"
         }
       ]
     },
