@@ -1,0 +1,40 @@
+.o-menu__toggle {
+  width: 100%;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  text-transform: uppercase;
+  letter-spacing: em($ratio--t);
+  line-height: em($height--xxs);
+
+  &:focus {
+    outline: none;
+  }
+
+  @include media($large) {
+    display: none;
+  }
+}
+
+.o-menu__content {
+  @include media($small) {
+    display: none;
+
+    margin-top: em($ratio--b);
+  }
+
+  .hover--is-active & {
+    display: block;
+  }
+}
+
+.o-menu__list {
+  @include margin(0 null);
+
+  @include media($small) {
+    text-align: center;
+  }
+}
