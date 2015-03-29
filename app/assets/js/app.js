@@ -1,3 +1,17 @@
+var
+  currentDevice,
+  $body = $("body");
+
+if (isDesktop()) {
+  currentDevice = "desktop";
+
+  $body.addClass("device--is-desktop");
+} else {
+  currentDevice = "mobile";
+
+  $body.addClass("device--is-mobile");
+}
+
 $("[data-masonry]").imagesLoaded(function() {
   $("[data-masonry]").masonry({
     itemSelector: "[data-masonry-item]",
@@ -35,3 +49,13 @@ function initFlickity() {
 }
 
 initFlickity();
+
+// jQuery hover.
+if (currentDevice === "mobile") {
+  $("[data-hover]")
+    .on("click", function() {
+      $(this)
+        .toggleClass("hover--is-active")
+        .siblings().removeClass("hover--is-active");
+    });
+}
