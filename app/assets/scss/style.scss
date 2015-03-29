@@ -43,11 +43,12 @@ Custom
 
 // Objects
 @import "objects/objects";
-@import "chj-framework/app/assets/scss/objects/o-list";
+@import "objects/navigation";
+@import "objects/o-list";
 
 @import "chj-framework/app/assets/scss/typography/t-head";
 @import "chj-framework/app/assets/scss/typography/t-text";
-@import "chj-framework/app/assets/scss/typography/t-link";
+@import "typography/t-link";
 @import "typography/typography";
 
 @import "chj-framework/app/assets/scss/proto/p-align";
