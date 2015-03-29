@@ -1,0 +1,18 @@
+[class^="o-list--"],
+[class*=" o-list--"] {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.o-list__item {
+  line-height: em($height--b);
+
+  @include media($portable) {
+    display: inline-block;
+
+
+    & + & {
+      margin-left: em($ratio--m);
+    }
+  }
+}
