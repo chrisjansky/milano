@@ -2,56 +2,50 @@ extends templates/_site
 
 block template-content
   nav.m-sticky.l-wrap.l-wrap--horizontal(data-headroom)
-    .m-sticky__table.l-inline
-      .m-sticky__cell.l-inline__cell
-        ul.o-list--inline
-          each instance in navItems
-            li.o-list__item
-              a.t-link--white(href=instance.link, data-scrollto)!= instance.title
-      .m-sticky__cell.l-inline__cell
-        ul.o-list--inline
-          each instance in sideItems
-            li.o-list__item
-              if instance.data
-                a.t-link--white(href=instance.link, data-featherlight="ajax")!= instance.title
-              else
-                a.t-link--white(href=instance.link)!= instance.title
+    .o-menu(data-hover)
+      button.o-menu__toggle Menu
+
+      .o-menu__content.m-sticky__table
+        .m-sticky__cell
+          ul.o-menu__list.o-list--inline
+            each instance in navItems
+              li.o-list__item
+                a.t-link--white(href=instance.link, data-scrollto)!= instance.title
+        .m-sticky__cell
+          ul.o-menu__list.o-list--inline
+            each instance in sideItems
+              li.o-list__item
+                if instance.data
+                  a.t-link--white(href=instance.link, data-featherlight="ajax")!= instance.title
+                else
+                  a.t-link--white(href=instance.link)!= instance.title
 
   header#info.m-header
     .m-header__top.l-wrap.l-wrap--small
       .m-header__cell.l-grid__item--3
         .m-header__content
-          span When
+          h2.m-header__title--when.t-head--high 14&ndash;19 April 2015
+          ul.m-header__list.o-list--stacked
+            li Tuesday&ndash;Saturday 10&ndash;20
+            li Sunday 10&ndash;18
+            li Open Evening Wednesday 20&ndash;22
 
-      .l-grid__item--3
+      .m-header__cell.l-grid__item--3
         a.o-logo(href="index")
           img(src="assets/images/logo.png", alt="PopUpShow Logo")
           h1.t-head--top PopUpShow
 
       .m-header__cell.l-grid__item--3
         .m-header__content
-          span Where
-
-    .m-header__info.l-wrap
-      .m-header__text
-        p The PopUpShow presents recent student works from Tomas Bata University in Zlín focusing on wood as conceptual topic as well as basic material. The presentation itself reflects the well-known phenomenon of PopUpCulture, forming a&nbsp;PopUpShow with PopUpDesign and PopCorn.
-
-      .m-header__details.l-grid--2
-        .l-grid__item--2
-          h2.t-head--high When
-          ul.o-list--stacked
-            li 14&ndash;19 April 2015
-            li Tuesday&ndash;Saturday 10&ndash;20
-            li Sunday 10&ndash;18
-            li.p-push--2000 Open Evening Wednesday 20&ndash;22
-
-        .l-grid__item--2
-          h2.t-head--high Where
-          ul.o-list--stacked
-            li Ventura Lambrate
+          h2.m-header__title--where.t-head--high Ventura Lambrate
+          ul.m-header__list.o-list--stacked
             li Via Dei Canzi 19
             li 20134 Milano, Italy
-            li.p-push--2000: a.t-dotted(href="https://goo.gl/maps/OxtMm") Show in Google Maps
+            li: a.t-dotted(href="https://goo.gl/maps/OxtMm") Show in Google Maps
+
+    .m-header__info.l-wrap.l-wrap--section
+      .m-header__text
+        p The PopUpShow presents recent student works from Tomas Bata University in Zlín focusing on wood as conceptual topic as well as basic material. The presentation itself reflects the well-known phenomenon of PopUpCulture, forming a&nbsp;PopUpShow with PopUpDesign and PopCorn.
 
   main#products.m-products
     .m-products__loop(data-masonry)
@@ -65,46 +59,50 @@ block template-content
 
         article.o-thumb(data-masonry-item, class="o-thumb--#{instance.type} o-thumb--#{instance.id}")
           a.o-thumb__link(href="javascript:" data-featherlight="products.html ##{instance.id}")
-            if instance.overlay
-              .o-thumb__overlay(style="background-image: url('assets/images/overlay/#{instance.image}.png')")
-            else
-              .o-thumb__overlay
-                span.t-head--high.o-thumb__title= instance.title
+            .o-thumb__overlay(style="background-image: url('assets/images/overlay/#{instance.image}.png')")
             img.o-thumb__image(src="assets/images/thumbnail/#{instance.image}.jpg", alt=instance.title)
+            h1.t-head--high.o-thumb__title= instance.title
+            strong.o-thumb__author= instance.author
 
         if instance.illustration && instance.illustration.position === "bottom"
           include partials/_boy
 
-  section#about.m-about.l-section--white.l-wrap
-    h2.m-about__title.t-head--higher.t-entre About
+  section#about.m-about.l-section--white
+    .l-wrap.l-wrap--section
+      h2.m-about__title.t-head--higher.t-entre About
+      .m-about__text
+        p We are dynamic, young and full of creative ideas, same as our university we study at. We are used to work in cross-functional teams and regularly win prestigious international awards such as Cannes Young Lions and the Red Dot Design Award. 
+        p 
+          | We study graphic design, spatial design, advertising photography, industrial design, marketing communications, audiovisual arts, shoe and fashion design and glass design at 
+          a.t-text-link(href="http://www.utb.cz/fmk-en") The Faculty Of Multimedia Communications
+          |  at 
+          a.t-text-link(href="http://www.utb.cz/index.php?lang=2") Tomas Bata University in Zlín
+          |  in the Czech Republic.
+        p
+          | We&rsquo;ve already been twice in Milan Design Week &mdash; 
+          a.t-text-link(href="http://aboutlayabouts.com") About Layabouts
+          |  in 2014, 
+          a.t-text-link(href="http://www.bitememilan.com") Bite Me Milan
+          |  in 2013. Here we are again with our PopUpShow. Welcome and enjoy.
 
-    .m-about__text
-      p We are dynamic, young and full of creative ideas, same as our university we study at. We are used to work in cross-functional teams and regularly win prestigious international awards such as Cannes Young Lions and the Red Dot Design Award. 
-      p 
-        | We study graphic design, spatial design, advertising photography, industrial design, marketing communications, audiovisual arts, shoe and fashion design and glass design at 
-        a.t-text-link(href="http://www.utb.cz/fmk-en") The Faculty Of Multimedia Communications
-        |  at 
-        a.t-text-link(href="http://www.utb.cz/index.php?lang=2") Tomas Bata University in Zlín
-        |  in the Czech Republic.
-      p
-        | We&rsquo;ve already been twice in Milan Design Week &mdash; 
-        a.t-text-link(href="http://aboutlayabouts.com") About Layabouts
-        |  in 2014, 
-        a.t-text-link(href="http://www.bitememilan.com") Bite Me Milan
-        |  in 2013. Here we are again with our PopUpShow. Welcome and enjoy.
+  section#team.m-team
+    .l-wrap.l-wrap--section
+      h2.m-team__title.t-head--higher.t-entre Team
+      .m-team__loop
+        each group in team
+          .m-team__group(class="m-team__group--#{group.category}")
+            h3.m-team__name.t-head--bottom!= group.title
+            ul.m-team__list.o-list--stacked
+              each person in group.people
+                if person.link
+                  li.m-team__person: a.t-dotted.t-link--dark(href=person.link)= person.name
+                else
+                  li.m-team__person= person.name
+      img.o-end(src="assets/images/the_end.png", alt="The End")
 
-  section#team.m-team.l-wrap
-    h2.m-team__title.t-head--higher.t-entre Team
+  footer#contact.o-footer.l-section--primary
 
-    each group in team
-      .m-team__group(class="m-team__group--#{group.category}")
-        h3.m-team__name.t-head--bottom!= group.title
-        ul.m-team__list.o-list--stacked
-          each person in group.people
-            li.m-team__person= person.name
-
-  footer#contact.o-footer.l-wrap.l-section--primary
-    .m-contact
+    .l-wrap.l-wrap--section
       h2.t-head--higher.t-entre Contact
 
       .m-contact__people.l-grid--4
@@ -137,20 +135,19 @@ block template-content
             li
               a.o-button.t-link--white.t-dotted(href="press.html #press", data-featherlight="ajax") View Press Assets
 
-    .m-links
+      .m-links
+        .m-links__group
+          h4.t-head--bottom.m-links__title Organizers
 
-      .m-links__group
-        h4.t-head--bottom.m-links__title Organizers
+          each instance, index in [{"id": "utb", "name": "Faculty of Multimedia Communications, Tomas Bata University", "image": "logo_fmc.png", "link": "http://www.utb.cz/fmk"}, {"id": "vasku", "name": "Vasku & Klug", "image": "logo_vaskuklug.png", "link": "http://www.vasku-klug.com"}]
+            .m-links__item
+              a.o-affiliate(href=instance.link, class="o-affiliate--#{instance.id}")
+                img(src="assets/images/#{instance.image}", alt=instance.name)
 
-        each instance, index in [{"id": "utb", "name": "Faculty of Multimedia Communications, Tomas Bata University", "image": "logo_fmc.png", "link": "http://www.utb.cz/fmk"}, {"id": "vasku", "name": "Vasku & Klug", "image": "logo_vaskuklug.png", "link": "http://www.vasku-klug.com"}]
-          .m-links__item
-            a.o-affiliate(href=instance.link, class="o-affiliate--#{instance.id}")
-              img(src="assets/images/#{instance.image}", alt=instance.name)
+        .m-links__group
+          h4.t-head--bottom.m-links__title Partners
 
-      .m-links__group
-        h4.t-head--bottom.m-links__title Partners
-
-        each instance, index in [{"id": "cd", "name": "Czechdesign", "image": "logo_czechdesign.png", "link": "http://www.czechdesign.cz"}, {"id": "cc", "name": "Czech Centres", "image": "logo_cc.png", "link": "http://milano.czechcentres.cz"}]
-          .m-links__item
-            a.o-affiliate(href=instance.link, class="o-affiliate--#{instance.id}")
-              img(src="assets/images/#{instance.image}", alt=instance.name)
+          each instance, index in [{"id": "cd", "name": "Czechdesign", "image": "logo_czechdesign.png", "link": "http://www.czechdesign.cz"}, {"id": "cc", "name": "Czech Centres", "image": "logo_cc.png", "link": "http://milano.czechcentres.cz"}]
+            .m-links__item
+              a.o-affiliate(href=instance.link, class="o-affiliate--#{instance.id}")
+                img(src="assets/images/#{instance.image}", alt=instance.name)
