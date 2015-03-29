@@ -71,3 +71,9 @@ Styleguide 2.1.
 .l-wrap--no-bottom {
   padding-bottom: 0;
 }
+
+.l-wrap--section {
+  max-width: em(1100);
+  
+  @include margin(null auto);
+}
