@@ -8,23 +8,87 @@
   @include padding(em($ratio--b) null);
 }
 
+.m-sticky__table {
+  @include media($large) {
+    display: table;
+
+    width: 100%;
+  }
+}
+
+.m-sticky__cell {
+  @include media($large) {
+    display: table-cell;
+    vertical-align: middle;
+    
+    @include collapse-children;
+
+    &:first-child {
+      text-align: left; 
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
 .m-header {
   text-align: center;
 
-  color: $grey--500;
+  color: $color1--500;
 }
 
 .m-header__top {
   padding-top: em($ratio--xxl);
 
-  background-image: url("../images/pattern_stripe.jpg");
-  background-position: -5px center;
+  background-image: url("../images/pattern_stripe.png");
+  background-position: center;
 }
 
 .m-header__cell {
-  @include pseudo-center--parent;
+  @include media($small) {
+    & + & {
+      margin-top: em($ratio--b);
+    }
+  }
 
-  height: em(220);
+  @include media($desktop) {
+    @include pseudo-center--parent;
+
+    height: em(220);
+  }
+}
+
+[class^="m-header__title"],
+[class*=" m-header__title"] {
+  display: inline-block;
+  height: 52px;
+  
+  text-indent: 101%;
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.m-header__title--when {
+  width: 276px;
+  
+  background-image: url("../images/when_nadpis.png");
+}
+
+.m-header__title--where {
+  width: 248px;
+  
+  background-image: url("../images/where_nadpis.png");
+}
+
+.m-header__list {
+  transform: skew(-7deg) rotate(-7deg);
+
+  margin-top: 0;
 }
 
 .m-header__content {
@@ -33,19 +97,27 @@
 }
 
 .m-header__text {
-  width: flex-grid(8, $columns__desktop);
+  @include media($desktop) {
+    width: flex-grid(10, $columns__desktop);
 
-  @include margin(null auto em($ratio--xl));
-
-  color: $color1--500;
+    @include margin(null auto em($ratio--xl));
+  }
 }
 
 .m-products {
-  padding: em($ratio--l) em($ratio--m);
+  padding: em($unit--b);
+
+  @include media($desktop) {
+    padding: em($ratio--b);
+  }
 }
 
 .m-products__loop {
   @include margin(null auto);
+
+  @include media($small) {
+    max-width: em(300);
+  }
 }
 
 .m-about__title {
@@ -53,17 +125,22 @@
 }
 
 .m-about__text {
-  @include column-count(2);
-  @include column-gap(em($ratio--m));
+  @include media($large) {
+    @include column-count(2);
+    @include column-gap(em($ratio--m));
 
-  width: flex-grid(10, $columns__desktop);
-  @include shift(1 of $columns__desktop);
-
-  margin-top: em($ratio--l);
-
-  p:first-child {
-    margin-top: 0;
+    p:first-child {
+      margin-top: 0;
+    }
   }
+
+  // @include media($desktop) {
+    // width: flex-grid(10, $columns__desktop);
+    // @include shift(1 of $columns__desktop);
+  // }
+
+  // margin-top: em($ratio--l);
+
 }
 
 .m-team {
@@ -79,9 +156,21 @@
 }
 
 .m-team__group {
-  @include span-columns($columns__desktop / 6);
+  margin-bottom: em($ratio--s);
 
-  margin-bottom: em($ratio--m);
+  @include media($phablet) {
+    @include span-columns($columns__phablet / 2 of $columns__phablet);
+  }
+
+  @include media($tablet) {
+    @include span-columns($columns__tablet / 3 of $columns__tablet);
+  }
+
+  @include media($desktop) {
+    @include span-columns($columns__desktop / 6 of $columns__desktop);
+
+    margin-bottom: em($ratio--m);
+  }
 }
 
 .m-team__list {
@@ -99,17 +188,46 @@
   @include omega();
 
   li {
-    @include span-columns($columns__desktop / 6);
-    @include omega(6n);
+    @include media($phablet) {
+      @include span-columns($columns__phablet / 2 of $columns__phablet);
+      @include omega(2n);
+    }
+
+    @include media($tablet) {
+      @include span-columns($columns__tablet / 3 of $columns__tablet);
+      @include omega(3n);
+    }
+
+    @include media($desktop) {
+      @include span-columns($columns__desktop / 6 of $columns__desktop);
+      @include omega(6n);
+    }
   }
 }
 
-.m-team__group--marketing {
-  @include omega();
+@include media($phablet) {
+  .m-team__group--spatial,
+  .m-team__group--video,
+  .m-team__group--marketing {
+    @include omega();
+  }
+}
+
+@include media($tablet) {
+  .m-team__group--photo,
+  .m-team__group--web {
+    @include omega();
+  }
+}
+
+@include media($desktop) {
+  .m-team__group--marketing {
+    @include omega();
+  }
 }
 
 .m-contact__people {
-  margin-top: em($ratio--xl);
+  // margin-top: em($ratio--xl);
 }
 
 .m-contact__position {
@@ -119,7 +237,11 @@
 .m-links {
   @include clearfix;
 
-  margin-top: em($ratio--m);
+  margin-top: em($ratio--b);
+
+  @include media($large) {
+    margin-top: em($ratio--m);
+  }
 }
 
 .m-links__title {
@@ -127,11 +249,23 @@
 }
 
 .m-links__group {
-  @include span-columns($columns__desktop / 2);
+  @include media($phablet) {
+    @include span-columns($columns__phablet / 2 of $columns__phablet);
+  }
+
+  @include media($tablet) {
+   @include span-columns($columns__tablet / 2 of $columns__tablet); 
+  }
+
+  @include media($desktop) {
+    @include span-columns($columns__desktop / 2 of $columns__desktop);
+  }
 }
 
 .m-links__item {
-  @include span-columns(3 of $columns__desktop / 2)
+  @include media($desktop) {
+    @include span-columns(3 of $columns__desktop / 2)
+  }
 }
 
 .m-releases__title,
