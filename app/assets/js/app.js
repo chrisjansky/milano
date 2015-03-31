@@ -44,7 +44,8 @@ $("[data-scrollto]").click(function() {
 function initFlickity() {
   $("[data-flickity]").flickity({
     setGallerySize: false,
-    pageDots: false
+    pageDots: false,
+    wrapAround: true
   });
 }
 
