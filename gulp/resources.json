@@ -20,6 +20,7 @@
       
       "bower_components/chj-framework/app/assets/js/chj-base.js",
       "bower_components/chj-framework/app/assets/js/chj-easing.js",
+      "bower_components/chj-framework/app/assets/js/chj-detect.js",
       "bower_components/chj-framework/app/assets/js/chj-external.js",
       "app/assets/js/app.js"
     ],
