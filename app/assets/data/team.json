@@ -11,13 +11,15 @@
           "name": "Daniel Szöllösi"
         },
         {
-          "name": "Eva Wirthová"
+          "name": "Eva Wirthová",
+          "link": "http://eva.brainware-studio.cz"
         },
         {
           "name": "Jiří Maxmilián Blšták"
         },
         {
-          "name": "Karolína Fardová"
+          "name": "Karolína Fardová",
+          "link": "http://karolinafardova.tumblr.com"
         },
         {
           "name": "Kateřina Brůhová"
@@ -34,7 +36,8 @@
           "link": "http://luciaregaskova.blogspot.sk"
         },
         {
-          "name": "Lukáš Uliarczyk"
+          "name": "Lukáš Uliarczyk",
+          "link": "http://www.behance.net/lukasuliarczyk"
         },
         {
           "name": "Tereza Čižmárová",
@@ -54,10 +57,12 @@
       "title": "Graphic Design",
       "people": [
         {
-          "name": "Veronika Holíková"
+          "name": "Veronika Holíková",
+          "link": "http://www.behance.net/holikovic"
         },
         {
-          "name": "Petr Belák"
+          "name": "Petr Belák",
+          "link": "http://www.behance.net/petrbelak"
         }
       ]
     },
@@ -66,7 +71,8 @@
       "title": "Spatial Design",
       "people": [
         {
-          "name": "Michael Chomiszak"
+          "name": "Michael Chomiszak",
+          "link": "http://www.behance.net/chomi"
         }
       ]
     },
@@ -75,7 +81,8 @@
       "title": "Photography",
       "people": [
         {
-          "name": "Filip Beránek"
+          "name": "Filip Beránek",
+          "link": "http://www.filipberanek.com"
         }
       ]
     },
@@ -84,7 +91,8 @@
       "title": "Video",
       "people": [
         {
-          "name": "Pavel Mašek"
+          "name": "Pavel Mašek",
+          "link": "http://forleaf.cz"
         }
       ]
     },
@@ -103,7 +111,8 @@
       "title": "Marketing &amp; PR",
       "people": [
         {
-          "name": "Anežka Adamíková"
+          "name": "Anežka Adamíková",
+          "link": "http://cz.linkedin.com/in/anezkaadamikova"
         }
       ]
     },
@@ -112,7 +121,8 @@
       "title": "Supervisor",
       "people": [
         {
-          "name": "Michael Vasku"
+          "name": "Michael Vasku",
+          "link": "http://www.vasku-klug.com"
         }
       ]
     },
