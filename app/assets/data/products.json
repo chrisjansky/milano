@@ -7,7 +7,12 @@
       "description": "Move like you want to #move, feel like you want to #feel, do what you want to #do. Because world is your oyster.",
       "image": "10_bota",
       "count": 3,
-      "type": "tall"
+      "type": "tall",
+      "illustration": {
+        "position": "bottom",
+        "image": "na_vysku_reziser.png",
+        "style": "square"
+      }
     },
     {
       "id": "jewellery",
@@ -16,24 +21,19 @@
       "description": "The whole cosmos #popup in #rings, #necklaces, #bracelets and #brooches. Those #burntcoals combined with #resin have created such unique #jewellery.",
       "image": "01_sperky",
       "count": 4,
-      "type": "wide",
-      "illustration": {
-        "position": "top",
-        "image": "na_vysku_reziser.png",
-        "style": "square"
-      }
+      "type": "wide"
     },
     {
       "id": "cinder",
       "title": "PopUpCinder",
       "author": "Branislav Glejtek",
-      "description": "Basic material for the polygonal lights made of burnt wood ash reminds cinder. The #polygonal shape of the interior lights brings a piece of a #rock into the house.",
+      "description": "Basic material for the polygonal lights made of burnt wood ash reminds cinder. The #polygonal shape of the interior lights brings a&nbsp;piece of a&nbsp;#rock into the house.",
       "image": "02_svetla_brana",
       "count": 2,
       "type": "wide"
     },
     {
-      "id": "pot",
+      "id": "flowerpot",
       "title": "Flower Pot",
       "author": "Tereza Čižmárová",
       "description": "The #flowerpot utilizes the #naturalfertilizingprinciple created by the #burning of the inner surface of the pot. The #glasspot effects roots and helps them to #growfaster.",
@@ -50,7 +50,7 @@
       "id": "chandelier",
       "title": "PopUpChandelier",
       "author": "Eva Wirthová",
-      "description": "A #chandelier that looks like a #glass jewellery box and is a symbol of something special to us we have to #protect. Thereby wood is becoming a #precious material we placed it in. #glass symbolizes the #fragility of natural balance.",
+      "description": "A #chandelier that looks like a&nbsp;#glass jewellery box and is a&nbsp;symbol of something special to us we have to #protect. Thereby wood is becoming a&nbsp;#precious material we placed it in. #glass symbolizes the #fragility of natural balance.",
       "image": "06_eva_lampa",
       "count": 2,
       "type": "tall"
@@ -59,7 +59,7 @@
       "id": "coffin",
       "title": "PopUpCoffin",
       "author": "Jiří Maxmilián Blšták",
-      "description": "This #coffin for pets with a growing #tree is a symbol of #continuity and #newlife. It is also a gentle #memory of those you loved and who are gone.",
+      "description": "This #coffin for pets with a&nbsp;growing #tree is a&nbsp;symbol of #continuity and #newlife. It is also a&nbsp;gentle #memory of those you loved and who are gone.",
       "image": "09_rakev",
       "count": 2,
       "type": "tall"
@@ -68,15 +68,10 @@
       "id": "desk",
       "title": "PopUpDesk",
       "author": "Karolína Fardová",
-      "description": "#hairytable livens up every interior. This #fury friend is #foldable so it may be also handy as a #carpet placed on the floor or a wall.",
+      "description": "#hairytable livens up every interior. This #fury friend is #foldable so it may be also handy as a&nbsp;#carpet placed on the floor or a&nbsp;wall.",
       "image": "03_stolik_chlpac",
       "count": 4,
-      "type": "wide",
-      "illustration": {
-        "position": "bottom",
-        "image": "na_vysku_herecka.png",
-        "style": "square"
-      }
+      "type": "wide"
     },
     {
       "id": "stool",
@@ -105,7 +100,7 @@
       "id": "radiator",
       "title": "PopUpRadiator",
       "author": "Lukáš Uliarczyk",
-      "description": "#siton or look at the #3Dprinted #wooden #radiator and warm yourself up. And if it’s not enough, fire up this #hotspot.",
+      "description": "#siton or look at the #3Dprinted #wooden #radiator and warm yourself up. And if it&rsquo;s not enough, fire up this #hotspot.",
       "image": "12_radiator",
       "count": 2,
       "type": "tall"
@@ -123,24 +118,24 @@
       "id": "lamp",
       "title": "PopUpLamp",
       "author": "Daniel Szöllösi",
-      "description": "The interior wooden #lamp is geometrically divided in the middle by a #glass plate. The #glassedge is lit and creates an impressive effect.",
+      "description": "The interior wooden #lamp is geometrically divided in the middle by a&nbsp;#glass plate. The #glassedge is lit and creates an impressive effect.",
       "image": "05_lampa_daniel",
       "count": 3,
-      "type": "tall"
-    },
-    {
-      "id": "log",
-      "title": "PopUpLight",
-      "author": "Lucia Regásková",
-      "description": "The #glass bubble of #light reminds a wooden #soul, which is an olden symbol of energy and spirituality. Wood and glass #live so #together in mutual #symbiosis.",
-      "image": "11_poleno_svetla",
-      "count": 2,
       "type": "tall",
       "illustration": {
         "position": "bottom",
         "image": "na_vysku_chaplin.png",
-        "style": "square"
+        "style": "wide"
       }
+    },
+    {
+      "id": "light",
+      "title": "PopUpLight",
+      "author": "Lucia Regásková",
+      "description": "The #glass bubble of #light reminds a&nbsp;wooden #soul, which is an olden symbol of energy and spirituality. Wood and glass #live so #together in mutual #symbiosis.",
+      "image": "11_poleno_svetla",
+      "count": 2,
+      "type": "tall"
     }
   ]
 }
