@@ -1,17 +1,38 @@
 .o-logo {
   display: inline-block;
 
-  width: em(220);
-  height: em(220);
+  width: em(250);
+  height: em(250);
 
   overflow: hidden;
+
+  @include media($phone) {
+    margin-top: em($ratio--m);
+  }
 }
 
 .o-thumb {
   margin-bottom: em($unit--s);
 
-  @include media($desktop) {
+  @include media($large) {
     margin-bottom: em($ratio--m);
+  }
+}
+
+@include media($tablet) {
+  .o-thumb--tall {
+    width: em(270);
+  }
+  .o-thumb--wide {
+    width: em(418);
+  }
+}
+@include media($desktop) {
+  .o-thumb--tall {
+    width: em(306);
+  }
+  .o-thumb--wide {
+    width: em(472);
   }
 }
 
@@ -20,18 +41,6 @@
   position: relative;
 
   text-decoration: none;
-
-  overflow: hidden;
-
-  .o-thumb--tall & {
-    width: em(300);
-    height: em(463);
-  }
-
-  .o-thumb--wide & {
-    width: em(463);
-    height: em(300);
-  }
 }
 
 .o-thumb__overlay {
@@ -60,13 +69,19 @@
 }
 
 .o-sizer--column {
+
+  @include media($tablet) {
+    width: em(122);
+  }
   @include media($desktop) {
-    width: em(163);
+    width: em(140);
   }
 }
 
 .o-sizer--gutter {
-  width: em(0);
+  @include media($large) {
+    width: em($ratio--m);
+  }
 }
 
 .o-gallery {
@@ -82,13 +97,18 @@
   white-space: nowrap;
 
   @include pseudo-center--parent;
+
+  padding: em($ratio--b);
 }
 
 .o-gallery__image {
   display: inline-block;
   vertical-align: middle;
 
-  max-width: 50%;
+  
+  @include media($large) {
+    max-width: 50%;
+  }
   max-height: 100%;
 }
 
@@ -102,25 +122,26 @@
 }
 
 .o-boy {
+  display: none;
+
   background-position: center;
+  background-repeat: no-repeat;
 
-  margin-bottom: em(26);
+  margin-bottom: em($ratio--m);
 
-  @include media($small) {
-    display: none;
+  @include media($widescreen) {
+    display: block;
   }
 }
 
 .o-boy--square {
-  width: em(300);
+  width: em(306);
   height: em(300);
 }
 
-.o-modal {
-  @include position(fixed, 0 0 0 0);
-  background-color: white;
-
-  z-index: $index--l;
+.o-boy--wide {
+  width: em(472);
+  height: em(300);
 }
 
 .o-affiliate {
@@ -147,6 +168,10 @@
   overflow: hidden;
 
   @include margin(null auto);
+
+  @include media($large) {
+    margin-bottom: em($ratio--l);
+  }
 }
 
 .o-detail__ir {
@@ -160,25 +185,152 @@
   visibility: hidden;
 }
 .o-detail__description {
-  color: $grey--600;
+  color: $color1--500;
+
+  @include margin(null em($ratio--b));
+}
+
+.o-picture {
+  margin-bottom: em($ratio--m);
+
+  @include media($small) {
+    max-width: em(300);
+
+    @include margin(null auto);
+  }
+
+  @include media($large) {
+    margin-bottom: em($ratio--l);
+  }
+}
+
+.o-picture__frame {
+  @include media($large) {
+    position: relative;
+
+    margin-bottom: em($ratio--m);
+
+    padding-bottom: 100%;
+  }
+}
+
+.o-picture__image {
+  @include media($large) {
+    @include position(absolute, 0 0 0 0);
+
+    margin: auto;
+
+    max-height: 100%;
+
+    .o-picture--tall & {
+      max-width: 80%;
+    }
+  }
 }
 
 .o-release {
   margin-bottom: em($ratio--m);
 
-  color: $grey--300;
+  @include media($large) {
+    margin-bottom: em($ratio--l);
+  }
+
+  color: $color1--500;
 }
 
 .o-release__text {
-  color: $grey--600;
+
+  display: inline;
 }
 
 .o-release__title {
   color: $grey--800;
+
+  display: inline;
+}
+
+.o-release__content {
+  @include margin(em($ratio--b) null);
+}
+
+.o-release__lang {
+  display: inline-block;
+
+  background-color: transparent;
+
+  color: $grey--800;
+  letter-spacing: em($ratio--t);
+  font-weight: $font__sans--bold;
+
+  margin-right: em($ratio--xxs);
+}
+
+.o-release__date {
+  display: inline-block;
+
+  margin-right: em($ratio--xs);
+
+  font-weight: $font__sans--black;
 }
 
 .o-download {
+  margin-top: em($ratio--b);
+
+  font-size: em($unit--xs);
+
+  color: $grey--200;
+}
+
+.o-download__link {
   & + & {
     margin-left: em($ratio--b);
   }
+}
+
+.o-end {
+  display: inline-block;
+  width: 100%;
+
+  clear: both;
+
+  @include media($desktop) {
+    margin-top: em(-$ratio--xl);
+  }
+}
+.o-end__image {
+  @include margin(null auto);
+}
+
+.o-asset {
+  text-align: center;
+
+  @include media($small) {
+    & + & {
+      margin-top: em($unit--l);
+    }
+  }
+
+  @include media($tablet) {
+    @include span-columns($columns__tablet / 3 of $columns__tablet);
+  }
+}
+
+.o-asset__link {
+  display: block;
+}
+
+.o-asset__image {
+  max-width: 60%;
+
+  @include margin(null auto em($ratio--b));
+}
+
+.o-asset__caption {
+  text-decoration: none;
+
+  border-bottom: $line--s solid;
+
+  display: inline-block;
+
+  font-size: em($unit--xs);
 }

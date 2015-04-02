@@ -4,6 +4,12 @@
   border-bottom: $line--s solid;
 }
 
+.t-head--top {
+  @include media($large) {
+    font-size: em($unit--h);
+  }
+}
+
 .t-head--higher {
   font-weight: $font__sans--light;
 }
