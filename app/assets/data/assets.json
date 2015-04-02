@@ -1,0 +1,16 @@
+{
+  "assets": [
+    {
+      "title": "Logo",
+      "file": "logo"
+    },
+    {
+      "title": "Poster",
+      "file": "poster"
+    },
+    {
+      "title": "Catalogue",
+      "file": "catalogue"
+    }
+  ]
+}
