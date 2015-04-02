@@ -24,7 +24,7 @@ block template-content
     .m-header__top.l-wrap.l-wrap--small
       .m-header__cell.l-grid__item--3
         .m-header__content
-          h2.m-header__title--when.t-head--high 14&ndash;19 April 2015
+          h2.m-header__title--when 14&ndash;19 April 2015
           ul.m-header__list.o-list--stacked
             li Tuesday&ndash;Saturday 10&ndash;20
             li Sunday 10&ndash;18
@@ -33,19 +33,18 @@ block template-content
       .m-header__cell.l-grid__item--3
         a.o-logo(href="index")
           img(src="assets/images/logo.png", alt="PopUpShow Logo")
-          h1.t-head--top PopUpShow
+          h1 PopUpShow
 
       .m-header__cell.l-grid__item--3
         .m-header__content
-          h2.m-header__title--where.t-head--high Ventura Lambrate
+          h2.m-header__title--where Ventura Lambrate
           ul.m-header__list.o-list--stacked
             li Via Dei Canzi 19
             li 20134 Milano, Italy
             li: a.t-dotted(href="https://goo.gl/maps/OxtMm") Show in Google Maps
 
     .m-header__info.l-wrap.l-wrap--section
-      .m-header__text
-        p The PopUpShow presents recent student works from Tomas Bata University in Zlín focusing on wood as conceptual topic as well as basic material. The presentation itself reflects the well-known phenomenon of PopUpCulture, forming a&nbsp;PopUpShow with PopUpDesign and PopCorn.
+      p.m-header__text The PopUpShow presents recent student works from Tomas Bata University in Zlín focusing on wood as a&nbsp;conceptual topic as well as a&nbsp;basic material. The presentation itself reflects the well-known phenomenon of PopUpCulture, forming a&nbsp;PopUpShow with PopUpDesign and PopCorn.
 
   main#products.m-products
     .m-products__loop(data-masonry)
@@ -60,26 +59,25 @@ block template-content
         article.o-thumb(data-masonry-item, class="o-thumb--#{instance.type} o-thumb--#{instance.id}")
           a.o-thumb__link(href="javascript:" data-featherlight="products.html ##{instance.id}")
             .o-thumb__overlay(style="background-image: url('assets/images/overlay/#{instance.image}.png')")
-            img.o-thumb__image(src="assets/images/thumbnail/#{instance.image}.jpg", alt=instance.title)
-            h1.t-head--high.o-thumb__title= instance.title
-            strong.o-thumb__author= instance.author
+              h1.o-thumb__title= instance.title
+              strong.o-thumb__author= instance.author
+            img.o-thumb__image(src="assets/images/thumbnail/#{instance.image}.jpg", alt="#{instance.title} Thumbnail")
 
         if instance.illustration && instance.illustration.position === "bottom"
           include partials/_boy
 
   section#about.m-about.l-section--white
     .l-wrap.l-wrap--section
-      h2.m-about__title.t-head--higher.t-entre About
+      h3.m-about__title.t-head--higher.t-entre About
       .m-about__text
-        p We are dynamic, young and full of creative ideas, same as our university we study at. We are used to work in cross-functional teams and regularly win prestigious international awards such as Cannes Young Lions and the Red Dot Design Award. 
+        p We are dynamic, young and full of creative ideas, just like the university we study at. We are used to working in cross-functional teams and regularly win prestigious international awards such as Cannes Young Lions or the Red Dot Design Award.
         p 
           | We study graphic design, spatial design, advertising photography, industrial design, marketing communications, audiovisual arts, shoe and fashion design and glass design at 
           a.t-text-link(href="http://www.utb.cz/fmk-en") The Faculty Of Multimedia Communications
           |  at 
-          a.t-text-link(href="http://www.utb.cz/index.php?lang=2") Tomas Bata University in Zlín
-          |  in the Czech Republic.
+          a.t-text-link(href="http://www.utb.cz/index.php?lang=2") Tomas Bata University in Zlín, Czech Republic.
         p
-          | We&rsquo;ve already been twice in Milan Design Week &mdash; 
+          | We&rsquo;ve already been twice to the Milan Design Week &mdash; 
           a.t-text-link(href="http://aboutlayabouts.com") About Layabouts
           |  in 2014, 
           a.t-text-link(href="http://www.bitememilan.com") Bite Me Milan
@@ -87,23 +85,24 @@ block template-content
 
   section#team.m-team
     .l-wrap.l-wrap--section
-      h2.m-team__title.t-head--higher.t-entre Team
+      h3.m-team__title.t-head--higher.t-entre Team
       .m-team__loop
         each group in team
           .m-team__group(class="m-team__group--#{group.category}")
-            h3.m-team__name.t-head--bottom!= group.title
+            h4.m-team__name.t-head--bottom!= group.title
             ul.m-team__list.o-list--stacked
               each person in group.people
                 if person.link
                   li.m-team__person: a.t-dotted.t-link--dark(href=person.link)= person.name
                 else
                   li.m-team__person= person.name
-      img.o-end(src="assets/images/the_end.png", alt="The End")
+      span.o-end
+        img.o-end__image(src="assets/images/the_end.png", alt="The End")
 
   footer#contact.o-footer.l-section--primary
 
     .l-wrap.l-wrap--section
-      h2.t-head--higher.t-entre Contact
+      h3.t-head--higher.t-entre Contact
 
       .m-contact__people.l-grid--4
         .l-grid__item--4
@@ -137,7 +136,7 @@ block template-content
 
       .m-links
         .m-links__group
-          h4.t-head--bottom.m-links__title Organizers
+          h5.t-head--bottom.m-links__title Organizers
 
           each instance, index in [{"id": "utb", "name": "Faculty of Multimedia Communications, Tomas Bata University", "image": "logo_fmc.png", "link": "http://www.utb.cz/fmk"}, {"id": "vasku", "name": "Vasku & Klug", "image": "logo_vaskuklug.png", "link": "http://www.vasku-klug.com"}]
             .m-links__item
@@ -145,7 +144,7 @@ block template-content
                 img(src="assets/images/#{instance.image}", alt=instance.name)
 
         .m-links__group
-          h4.t-head--bottom.m-links__title Partners
+          h5.t-head--bottom.m-links__title Partners
 
           each instance, index in [{"id": "cd", "name": "Czechdesign", "image": "logo_czechdesign.png", "link": "http://www.czechdesign.cz"}, {"id": "cc", "name": "Czech Centres", "image": "logo_cc.png", "link": "http://milano.czechcentres.cz"}]
             .m-links__item

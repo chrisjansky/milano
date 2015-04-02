@@ -12,9 +12,9 @@ block template-content
             .o-gallery__content
               .o-detail__name
                 span.o-detail__ir(style="background-image: url('assets/images/detail_overlay/#{instance.image}.png')")
-                h1.t-head--top.o-detail__title= instance.title
+                h1.o-detail__title= instance.title
                 span.o-detail__author= instance.author
-              p.o-detail__description= instance.description
+              p.o-detail__description!= instance.description
 
           if instance.count > 1
             - more = 2

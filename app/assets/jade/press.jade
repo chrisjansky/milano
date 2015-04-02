@@ -1,76 +1,75 @@
 extends templates/_site
 
 block template-content
-  #press.m-press.l-wrap.l-wrap--horizontal
+  section#press.m-press.l-wrap.l-wrap--horizontal
+
+    h1.m-press__title.t-head--top Press
+
+    .m-press__contact.l-grid--2
+      .m-press__column
+        h3.t-head--lower.m-press__subtitle Contact Us
+
+      .m-press__column
+        ul.o-list--stacked
+          li Anežka Adamíková
+          li +420 733 755 959
+          li &nbsp;
+          li: a.t-dotted(href="mailto:info@popupshow.cz") info@popupshow.cz
+
+      .m-press__column
+        h3.t-head--lower.m-press__subtitle Visit Us
+
+      .m-press__column
+        ul.o-list--stacked
+          li Ventura Lambrate
+          li Via Dei Canzi 19
+          li 20134 Milano, Italy
+          li: a.t-dotted(href="https://goo.gl/maps/OxtMm") Show in Google Maps
+
     .m-releases
-      h1.m-releases__title.t-head--higher Press Releases
+      h2.m-press__section.t-head--higher.t-entre Press Releases
 
       .m-releases__list.l-grid--3
         - mentions = 0
           while mentions < 6
-            .o-release.l-grid__item--3
-              h1.o-release__title.t-head--low: +dummy(5, "words")
-              p.o-release__text: +dummy(200, "chars")
-              .l-inline
+            article.o-release.l-grid__item--3
+              .o-release__label
+                mark.o-release__lang EN
+                h1.o-release__title.t-head--low: +dummy(5, "words")
+              .o-release__content
+                strong.o-release__date April 2nd, Zlín
+                p.o-release__text: +dummy(200, "chars")
+              .o-download.l-inline
                 .l-inline__cell
                   span.o-release__note Download
                 .l-inline__cell
-                  a.o-download.t-link--dark.t-dotted(href="#") DOCX
-                  a.o-download.t-link--dark.t-dotted(href="#") PDF
+                  a.o-download__link.t-link--dark.t-dotted(href="#") DOCX
+                  a.o-download__link.t-link--dark.t-dotted(href="#") PDF
             - mentions++
 
-    .m-annotations
-      h1.m-annotations__title.t-head--higher Annotations
-
-      .m-annotations__list.l-grid--3
-        each instance in ["English", "Italian", "Czech"]
-          .o-annonation.l-grid__item--3
-            a.o-download.t-link--dark.t-dotted(href="#") Download #{instance} Description
-
     .m-pictures
-      h1.m-pictures__title.t-head--higher Press Photos
+      h2.m-press__section.t-head--higher.t-entre Press Photos
 
       .m-pictures__list.l-grid--6
-        - products = 1
-        while products < 14
-          .o-picture.l-grid__item--6
-            img(src="http://unsplash.it/300/200/?image=#{products*10}", alt="unsplash.it")
-            .l-inline
+        each instance in products
+          .o-picture.l-grid__item--6(class="o-picture--#{instance.type}")
+            .o-picture__frame
+              img.o-picture__image(src="assets/images/thumbnail/#{instance.image}.jpg", alt="#{instance.title} Thumbnail")
+            .o-download.l-inline
               .l-inline__cell
                 span.o-release__note Download
               .l-inline__cell
-                a.o-download.t-link--dark.t-dotted(href="#") Print
-                a.o-download.t-link--dark.t-dotted(href="#") Web
+                a.o-download__link.t-link--dark.t-dotted(href="assets/images/download/PopUpShow_#{instance.id}_72dpi.jpg", download, target="_blank") Web
+                a.o-download__link.t-link--dark.t-dotted(href="assets/images/download/PopUpShow_#{instance.id}_300dpi.jpg", download, target="_blank") Print
           - products++
 
     .m-assets
-      h1.m-assets__title.t-head--higher Assets
+      h2.m-press__section.t-head--higher.t-entre Assets
 
       .m-assets__list.l-grid--3
-        - graphics = 0
-        while graphics < 3
-          .o-asset.l-grid__item--3
-            a(href="#") Logo
-          - graphics++
 
-    .m-pictures
-      h1.m-pictures__title.t-head--higher Product Photos
-
-      .m-pictures__list.l-grid--6
-        - pictures = 1
-        while pictures < 7
-          .o-picture.l-grid__item--6
-            img(src="http://unsplash.it/300/200/?image=#{pictures*10}", alt="unsplash.it")
-            .l-inline
-              .l-inline__cell
-                span.o-release__note Download
-              .l-inline__cell
-                a.o-download.t-link--dark.t-dotted(href="#") Print
-                a.o-download.t-link--dark.t-dotted(href="#") Web
-          - pictures++
-
-    .m-press__contact
-      ul.o-list--stacked
-        li Anežka Adamíková
-        li +420 733 755 959
-        li: a(href="mailto:info@popupshow.cz") info@popupshow.cz
+        each instance in assets
+          .o-asset.l-grid__item--3(class="o-asset--#{instance.file}")
+            a.o-asset__link(href="assets/images/assets/popupshow_#{instance.file}.pdf", download, target="_blank")
+              img.o-asset__image(src="assets/images/assets/popupshow_#{instance.file}.png", alt="#{instance.title} Preview")
+              .o-asset__caption Download #{instance.title}
