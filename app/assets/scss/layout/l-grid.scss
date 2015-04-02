@@ -28,63 +28,48 @@ Styleguide 2.3.
   @include clearfix;
 }
 
-[class^="l-grid__item"],
-[class*=" l-grid__item"] {
-  @include media($portable) {
-    @include collapse-children;
-  }
-}
-
 .l-grid__item--2 {
   @include media($tablet) {
-    @include span-columns($columns__tablet / 2);
+    @include span-columns($columns__tablet / 2 of $columns__tablet);
+    @include omega(2n);
   }
 
   @include media($desktop) {
-    @include span-columns($columns__desktop / 2);
+    @include span-columns($columns__desktop / 2 of $columns__desktop);
+    @include omega(2n);
   }
 }
 
 .l-grid__item--3 {
-  // @include media($tablet--landscape) {
-  //   @include span-columns($columns__landscape / 2);
-  //   @include omega(2n);
-
-  //   &:last-child {
-  //     margin-top: em($ratio--m);
-  //     @include shift($columns__landscape / 4);
-  //   }
-  // }
-
   @include media($desktop) {
-    @include span-columns($columns__desktop / 3);
+    @include span-columns($columns__desktop / 3 of $columns__desktop);
     @include omega(3n);
   }
 }
 
 .l-grid__item--4 {
-  // @include media($phablet) {
-  //   @include span-columns($columns__phone / 2);
-  //   @include omega(2n);
-  // }
-
-  // @include media($tablet--portrait) {
-  //   @include span-columns($columns__portrait / 2);
-  //   @include omega(2n);
-  // }
+  @include media($phablet) {
+    @include span-columns($columns__phablet / 2 of $columns__phablet);
+    @include omega(2n);
+  }
 
   @include media($tablet) {
-    @include span-columns($columns__tablet / 2);
+    @include span-columns($columns__tablet / 2 of $columns__tablet);
     @include omega(2n);
   }
   
   @include media($desktop) {
-    @include span-columns($columns__desktop / 4);
+    @include span-columns($columns__desktop / 4 of $columns__desktop);
     @include omega(4n);
   }
 }
 
 .l-grid__item--6 {
+  @include media($tablet) {
+    @include span-columns($columns__tablet / 3);
+    @include omega(3n);
+  }
+
   @include media($desktop) {
     @include span-columns($columns__desktop / 6);
     @include omega(6n);
