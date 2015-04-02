@@ -7,7 +7,16 @@
   width: em(40);
   height: em(30);
 
-  padding: em($ratio--m);
+  @include media($small) {
+    top: 90%;
+  }
+
+  padding: em($ratio--b);
+
+  @include media($large) {
+    padding: em($ratio--l);
+  }
+
   box-sizing: content-box;
 
   background-color: transparent;
@@ -19,9 +28,13 @@
     display: none;
   }
   &.previous {
+    left: 0;
+
     background-image: url("../images/arrow_left.png");
   }
   &.next {
+    right: 0;
+
     background-image: url("../images/arrow_right.png");
   }
 

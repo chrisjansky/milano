@@ -5,10 +5,13 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  // &:last-of-type {
   background: rgba(white, .95) !important;
-  @include padding(em($unit--h) null);
-  // }
+  
+  @include padding(em($ratio--m) null);
+
+  @include media($large) {
+    @include padding(em($unit--h) null);
+  }
 
   .featherlight-content {
     position: static;
@@ -45,7 +48,11 @@
     top: 0;
     right: 0;
 
-    padding: em($ratio--l);
+    padding: em($ratio--m);
+
+    @include media($large) {
+      padding: em($ratio--l);
+    }
 
     background-color: transparent;
     background-image: url("../images/icon_close.png");
