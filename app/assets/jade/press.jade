@@ -30,22 +30,20 @@ block template-content
       h2.m-press__section.t-head--higher.t-entre Press Releases
 
       .m-releases__list.l-grid--3
-        - mentions = 0
-          while mentions < 6
-            article.o-release.l-grid__item--3
-              .o-release__label
-                mark.o-release__lang EN
-                h1.o-release__title.t-head--low: +dummy(5, "words")
+        each instance in docs
+          article.o-release.l-grid__item--3
+            .o-release__label
+              mark.o-release__lang= instance.lang
+              h1.o-release__title.t-head--low= instance.title
+            if instance.excerpt
               .o-release__content
-                strong.o-release__date April 2nd, Zlín
-                p.o-release__text: +dummy(200, "chars")
-              .o-download.l-inline
-                .l-inline__cell
-                  span.o-release__note Download
-                .l-inline__cell
-                  a.o-download__link.t-link--dark.t-dotted(href="#") DOCX
-                  a.o-download__link.t-link--dark.t-dotted(href="#") PDF
-            - mentions++
+                p.o-release__text!= instance.excerpt
+            .o-download.l-inline
+              .l-inline__cell
+                span.o-release__note Download
+              .l-inline__cell
+                each link in instance.download
+                  a.o-download__link.t-link--dark.t-dotted(href="assets/images/docs/#{link.file}", download, target="_blank")= link.format
 
     .m-pictures
       h2.m-press__section.t-head--higher.t-entre Press Photos
@@ -70,6 +68,6 @@ block template-content
 
         each instance in assets
           .o-asset.l-grid__item--3(class="o-asset--#{instance.file}")
-            a.o-asset__link(href="assets/images/assets/popupshow_#{instance.file}.pdf", download, target="_blank")
+            a.o-asset__link(href="assets/images/assets/popupshow_#{instance.file}.pdf", target="_blank")
               img.o-asset__image(src="assets/images/assets/popupshow_#{instance.file}.png", alt="#{instance.title} Preview")
               .o-asset__caption Download #{instance.title}
