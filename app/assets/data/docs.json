@@ -1,0 +1,49 @@
+{
+  "docs": [
+    {
+      "lang": "cz",
+      "title": "O PopUpShow",
+      "excerpt": "Výstava PopUpShow představuje současnou práci studentů Fakulty multimediálních komunikací Univerzity Tomáše Bati ve Zlíně.",
+      "download": [
+        {
+          "format": "DOCX",
+          "file": "CZ_O PopUpShow.docx"
+        },
+        {
+          "format": "PDF",
+          "file": "CZ_O vystave PopUpShow.pdf"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "About PopUpShow",
+      "excerpt": "The PopUpShow presents recent student works from Tomas Bata University in Zlín, Czech Republic, focusing on wood as a&nbsp;conceptual topic as well as a&nbsp;basic material.",
+      "download": [
+        {
+          "format": "DOCX",
+          "file": "EN_About-PopUpShow.docx"
+        },
+        {
+          "format": "PDF",
+          "file": "EN_About-PopUpShow.pdf"
+        }
+      ]
+    },
+    {
+      "lang": "it",
+      "title": "PopUpShow",
+      "excerpt": "Il PopUpShow presenta i recenti lavori degli studenti dell'Università Tomas Bata di Zlin, che si concentrano sul legno inteso sia come argomento concettuale sia come materiale di base.",
+      "download": [
+        {
+          "format": "DOCX",
+          "file": "IT_PopUpShow.docx"
+        },
+        {
+          "format": "PDF",
+          "file": "IT_PopUpShow.pdf"
+        }
+      ]
+    }
+  ]
+}
