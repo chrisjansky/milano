@@ -24,8 +24,8 @@
   "sideItems": [
     {
       "title": "Press",
-      "link": "press.html #press",
-      "data": true
+      "link": "javascript:",
+      "data": "press #press"
     },
     {
       "title": "Facebook",
