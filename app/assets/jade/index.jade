@@ -16,7 +16,7 @@ block template-content
             each instance in sideItems
               li.o-list__item
                 if instance.data
-                  a.t-link--white(href=instance.link, data-featherlight="ajax")!= instance.title
+                  a.t-link--white(href=instance.link, data-featherlight=instance.data)!= instance.title
                 else
                   a.t-link--white(href=instance.link)!= instance.title
 
@@ -133,7 +133,7 @@ block template-content
             li
               a.o-button.t-link--white.t-dotted(href="https://www.facebook.com/popupSHOWcz") Visit us at Facebook
             li
-              a.o-button.t-link--white.t-dotted(href="press.html #press", data-featherlight="ajax") View Press Assets
+              a.o-button.t-link--white.t-dotted(href="javascript:", data-featherlight="press #press") View Press Assets
 
       .m-links
         .m-links__group
