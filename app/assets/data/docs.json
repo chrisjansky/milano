@@ -7,11 +7,11 @@
       "download": [
         {
           "format": "DOCX",
-          "file": "CZ_O PopUpShow.docx"
+          "file": "CZ_O_PopUpShow.docx"
         },
         {
           "format": "PDF",
-          "file": "CZ_O vystave PopUpShow.pdf"
+          "file": "CZ_O_vystave_PopUpShow.pdf"
         }
       ]
     },
@@ -22,11 +22,11 @@
       "download": [
         {
           "format": "DOCX",
-          "file": "EN_About-PopUpShow.docx"
+          "file": "EN_About_PopUpShow.docx"
         },
         {
           "format": "PDF",
-          "file": "EN_About-PopUpShow.pdf"
+          "file": "EN_About_PopUpShow.pdf"
         }
       ]
     },
