@@ -319,3 +319,23 @@
 .m-releases {
   @include margin (em($ratio--l) null);
 }
+
+.m-pictures__title {
+  margin-bottom: em($ratio--s);
+}
+
+.m-pictures__note {
+  display: block;
+
+  text-align: center;
+
+  font-size: em($unit--xs);
+
+  color: $grey--200;
+
+  margin-bottom: em($ratio--m);
+
+  @include media($large) {
+    margin-bottom: em($ratio--l);
+  }
+}

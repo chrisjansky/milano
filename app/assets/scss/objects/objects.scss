@@ -290,10 +290,14 @@
 }
 
 .o-end {
+  position: relative;
+
   display: inline-block;
   width: 100%;
 
   clear: both;
+
+  z-index: -1;
 
   @include media($desktop) {
     margin-top: em(-$ratio--xl);
