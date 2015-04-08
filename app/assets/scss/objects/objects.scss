@@ -239,7 +239,6 @@
 }
 
 .o-release__text {
-
   display: inline;
 }
 
@@ -251,6 +250,10 @@
 
 .o-release__content {
   @include margin(em($ratio--b) null);
+
+  @include media($desktop) {
+    min-height: em(96);
+  }
 }
 
 .o-release__lang {
