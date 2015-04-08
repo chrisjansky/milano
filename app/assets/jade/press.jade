@@ -37,13 +37,15 @@ block template-content
               h1.o-release__title.t-head--low= instance.title
             if instance.excerpt
               .o-release__content
+                if instance.date
+                  strong.o-release__date= instance.date
                 p.o-release__text!= instance.excerpt
             .o-download.l-inline
               .l-inline__cell
                 span.o-release__note Download
               .l-inline__cell
                 each link in instance.download
-                  a.o-download__link.t-link--dark.t-dotted(href="assets/images/docs/#{link.file}", download, target="_blank")= link.format
+                  a.o-download__link.t-link--dark.t-dotted(href="assets/download/#{link.file}", download, target="_blank")= link.format
 
     .m-pictures
       h2.m-press__section.m-pictures__title.t-head--higher.t-entre Press Photos
