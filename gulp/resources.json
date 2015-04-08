@@ -1,6 +1,7 @@
 {
   "toMove": [
     "app/assets/fonts/*",
+    "app/assets/download/*",
     "!app/assets/**/*.html",
     "app/**/*.html"
   ],
