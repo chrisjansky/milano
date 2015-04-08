@@ -2,13 +2,33 @@
   "docs": [
     {
       "lang": "cz",
+      "title": "Tisková zpráva",
+      "date": "08/04/2015",
+      "excerpt": "Za pár dní vypukne v Miláně výstava zlínských studentů PopUpShow. Univerzita Tomáše Bati ve Zlíně již potřetí v řadě představí svou práci v rámci Ventura Lambrate v Miláně. Jejich PopUpShow inspirovaná filmovými prvky reflektuje fenomén PopUp kultury a vypukne 14. dubna 2015.",
+      "download": [
+        {
+          "format": "PDF",
+          "file": "CZ_tiskova-zprava_08-04-2015_PopUpShow.pdf"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Press Release",
+      "date": "08/04/2015",
+      "excerpt": "Students from the Czech Republic will pop up their PopUpShow. Find out more about exhibition, products, team, installation and graphic design of the PopUpShow.",
+      "download": [
+        {
+          "format": "PDF",
+          "file": "EN_press-release_08-04-2015_PopUpShow.pdf"
+        }
+      ]
+    },
+    {
+      "lang": "cz",
       "title": "O PopUpShow",
       "excerpt": "Výstava PopUpShow představuje současnou práci studentů Fakulty multimediálních komunikací Univerzity Tomáše Bati ve Zlíně.",
       "download": [
-        {
-          "format": "DOCX",
-          "file": "CZ_O_PopUpShow.docx"
-        },
         {
           "format": "PDF",
           "file": "CZ_O_vystave_PopUpShow.pdf"
@@ -21,10 +41,6 @@
       "excerpt": "The PopUpShow presents recent student works from Tomas Bata University in Zlín, Czech Republic, focusing on wood as a&nbsp;conceptual topic as well as a&nbsp;basic material.",
       "download": [
         {
-          "format": "DOCX",
-          "file": "EN_About_PopUpShow.docx"
-        },
-        {
           "format": "PDF",
           "file": "EN_About_PopUpShow.pdf"
         }
@@ -36,12 +52,19 @@
       "excerpt": "Il PopUpShow presenta i recenti lavori degli studenti dell'Università Tomas Bata di Zlin, che si concentrano sul legno inteso sia come argomento concettuale sia come materiale di base.",
       "download": [
         {
-          "format": "DOCX",
-          "file": "IT_PopUpShow.docx"
-        },
-        {
           "format": "PDF",
           "file": "IT_PopUpShow.pdf"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "About Products",
+      "excerpt": "Find out detailed information about each of thirteen products.",
+      "download": [
+        {
+          "format": "PDF",
+          "file": "EN_Description-of-products _08-04-2015-PopUpShow.pdf"
         }
       ]
     }
