@@ -105,11 +105,13 @@
   display: inline-block;
   vertical-align: middle;
 
-  
+  max-height: 100%;
+}
+
+.o-gallery__image--detail {
   @include media($large) {
     max-width: 50%;
   }
-  max-height: 100%;
 }
 
 .o-gallery__content {
