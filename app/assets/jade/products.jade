@@ -6,7 +6,7 @@ block template-content
       article.o-detail(id=instance.id)
         .o-gallery(data-flickity)
           .o-gallery__item
-            img.o-gallery__image(src="assets/images/detail/#{instance.image}_01.jpg", alt="#{instance.title} Photo")
+            img.o-gallery__image.o-gallery__image--detail(src="assets/images/detail/#{instance.image}_01.jpg", alt="#{instance.title} Photo")
 
           .o-gallery__item
             .o-gallery__content
@@ -20,5 +20,5 @@ block template-content
             - more = 2
             while more <= instance.count
               .o-gallery__item
-                img.o-gallery__image(src="assets/images/detail/#{instance.image}_0#{more}.jpg", alt="#{instance.title} Photo")
+                img.o-gallery__image.o-gallery__image--detail(src="assets/images/detail/#{instance.image}_0#{more}.jpg", alt="#{instance.title} Photo")
               - more++

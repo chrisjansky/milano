@@ -62,7 +62,16 @@ block template-content
               .l-inline__cell
                 a.o-download__link.t-link--dark.t-dotted(href="assets/images/download/PopUpShow_#{instance.id}_72dpi.jpg", download, target="_blank") Web
                 a.o-download__link.t-link--dark.t-dotted(href="assets/images/download/PopUpShow_#{instance.id}_300dpi.jpg", download, target="_blank") Print
-          - products++
+
+        each instance in photos
+          .o-picture.o-picture--wide.l-grid__item--6
+            .o-picture__frame
+              img.o-picture__image(src="assets/images/photo/#{instance.file}.jpg", alt="PopUpShow Exhibition Photo")
+            .o-download.l-inline
+              .l-inline__cell
+                span.o-release__note Download
+              .l-inline__cell
+                a.o-download__link.t-link--dark.t-dotted(href="assets/images/photo/#{instance.file}.jpg", download, target="_blank") Web
 
     .m-assets
       h2.m-press__section.t-head--higher.t-entre Assets

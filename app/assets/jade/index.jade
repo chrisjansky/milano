@@ -46,6 +46,14 @@ block template-content
     .m-header__info.l-wrap.l-wrap--section
       p.m-header__text The PopUpShow presents recent student works from Tomas Bata University in Zlín focusing on wood as a&nbsp;conceptual topic as well as a&nbsp;basic material. The presentation itself reflects the well-known phenomenon of PopUpCulture, forming a&nbsp;PopUpShow with PopUpDesign and PopCorn.
 
+  section.m-exhibit.l-section--white.l-wrap.l-wrap--vertical
+    h3.m-exhibit__title.t-head--higher.t-entre It&rsquo;s happening!
+    p.m-exhibit__text Enjoy the atmosphere of our PopUpShow at Milan Design Week 2015 &mdash; at least through the exhibition photos below.
+    .m-exhibit__gallery.o-gallery(data-flickity)
+      each instance in photos
+        .o-gallery__item
+          img.o-gallery__image(src="assets/images/photo/#{instance.file}.jpg", alt="PopUpShow Exhibition Photo")
+
   main#products.m-products
     .m-products__loop(data-masonry)
       .o-sizer--column(data-column)
