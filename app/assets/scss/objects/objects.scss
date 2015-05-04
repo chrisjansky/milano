@@ -114,6 +114,26 @@
   }
 }
 
+.o-gallery__ratio {
+  display: inline-block;
+  vertical-align: middle;
+  
+  width: 100%;
+  max-width: em(800);
+}
+
+.o-gallery__video {
+  position: relative;
+
+  // 16:9 ratio
+  padding-bottom: 56.25%;
+
+  & > iframe {
+    @include position(absolute, 0 null null 0);
+    @include size(100% 100%);
+  }
+}
+
 .o-gallery__content {
   display: inline-block;
   vertical-align: middle;
