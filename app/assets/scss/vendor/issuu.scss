@@ -1,0 +1,15 @@
+.issuuembed {
+  position: relative;
+
+  // Width must be set inline to prevent sidebar from showing. Lame.
+  width: auto !important;
+  max-width: em(720);
+
+  padding-bottom: 40%;
+
+  @include margin(null auto);
+
+  object {
+    @include position(absolute, 0 0 0 0);
+  }
+}
