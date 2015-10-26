@@ -344,6 +344,10 @@
   @include media($tablet) {
     @include span-columns($columns__tablet / 3 of $columns__tablet);
   }
+
+  @include media($large) {
+    margin-bottom: em($ratio--l);
+  }
 }
 
 .o-asset__link {
