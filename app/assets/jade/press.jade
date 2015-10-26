@@ -81,6 +81,6 @@ block template-content
 
         each instance in assets
           .o-asset.l-grid__item--3(class="o-asset--#{instance.file}")
-            a.o-asset__link(href="assets/images/assets/popupshow_#{instance.file}.pdf", target="_blank")
-              img.o-asset__image(src="assets/images/assets/popupshow_#{instance.file}.png", alt="#{instance.title} Preview")
+            a.o-asset__link(href="assets/images/assets/popupshow_#{instance.file}.#{instance.formats.download}", target="_blank")
+              img.o-asset__image(src="assets/images/assets/popupshow_#{instance.file}.#{instance.formats.thumb}", alt="#{instance.title} Preview")
               .o-asset__caption Download #{instance.title}
