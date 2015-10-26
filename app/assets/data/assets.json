@@ -2,15 +2,35 @@
   "assets": [
     {
       "title": "Logo",
-      "file": "logo"
+      "file": "logo",
+      "formats": {
+        "thumb": "png",
+        "download": "pdf"
+      }
     },
     {
       "title": "Poster",
-      "file": "poster"
+      "file": "poster",
+      "formats": {
+        "thumb": "png",
+        "download": "pdf"
+      }
     },
     {
       "title": "Catalogue",
-      "file": "catalogue"
+      "file": "catalogue",
+      "formats": {
+        "thumb": "png",
+        "download": "pdf"
+      }
+    },
+    {
+      "title": "Invitation",
+      "file": "invitation",
+      "formats": {
+        "thumb": "jpg",
+        "download": "png"
+      }
     }
   ]
 }
